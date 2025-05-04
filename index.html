@@ -50,7 +50,7 @@
             <div class="banner-container container">
             <h1 class="banner-headline">Effective Solutions
                 for Your Business</h1>
-                <button class="button" type="button">Order Service</button>
+                <button class="button" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
 <!-- endregion banner -->
@@ -344,7 +344,7 @@
         </section>
 <!--endregion portfolio-->  
 
-    </main>
+</main>
     <footer class="page-footer">
         <div class="footer-container container">
             <div class="footer-logo-container">
@@ -387,8 +387,9 @@
             <div class="footer-input-container">
                 <p class="text text-footer-social ">Subscribe</p>
                     <form class="footer-form" name="footer_subscribe_form" action="">
-                    <label class="visually-hidden" for="email">Email</label>
-                    <input class="footer-input" type="email" id="email" name="footer-subscribe" placeholder="E-mail" required>
+                    <label class="footer-label" for="email">
+                    <input class="footer-input" type="email" id="email" name="footer-subscribe" placeholder="E-mail" required/>
+                    </label>
                     <button class="button footer-button" type="submit">Subscribe
                         <svg class="icon-send"  width="24" height="24">
                             <use href="./images/icons.svg#icon-icon_send"></use>
@@ -398,9 +399,9 @@
             </div>
     </footer>
     
-    <div class="backdrop is-open"> 
+    <div class="backdrop is-open" data-modal> 
         <div class="modal">
-            <button class="modal-close" type="button" data-action="close-modal">
+            <button class="modal-close" type="button" data-action="close-modal" data-modal-close>
                 <svg class="close-icon" width="8" height="8">
                     <use href="./images/icons.svg#icon-close_icon"></use>
                     </svg>
@@ -410,57 +411,66 @@
                <div class ="modal-input-container">
                 <label class="text-label" for="user-name">
                     Name
+                </label>
                     <div class="modal-input modal-input-name">
                     <input class="input" type="text" id="user-name" name="user-name" title="Please fill out this field"required/>     
                     <svg class="icon-modal" width="18" height="24">
                             <use href="./images/icons.svg#icon-person_icon_mod"></use>
                         </svg>
-                    
+            
                     </div>
-                </label>
+                
                </div>
                <div class ="modal-input-container">
                 <label class="text-label" for="user-phone">
                     Phone
+                </label>
                     <div class="modal-input modal-input-phone">
                         <svg class="icon-modal" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone_icon_mod"></use>
                         </svg>
                     <input class="input" type="tel" id="user-phone" name="user-phone" title="Please fill out this field" required/>
                     </div>
-                </label>
+                
                </div>
                 <div class ="modal-input-container">
                 <label class="text-label" for="user-email">
                     Email
+                </label>
                     <div class="modal-input modal-input-email">
                         <svg class="icon-modal" width="18" height="24">
                             <use href="./images/icons.svg#icon-email_icon_mod"></use>
                         </svg>
                     <input class="input" type="email" id="user-email" name="user-email" title="Please fill out this field" required/>
                     </div>
-                </label>
+                
                 </div>
                 <div class="modal-comment-container">
                     <label class="text-label" for="user-comment">
                     Comment
-                    <div class="modal-input modal-input-comment" relative>
-                        <textarea class="input input-comment" id="user-comment" name="user-comment" title="Please fill out this field" placeholder="Text input"></textarea>
-                    </div>
                     </label>
+                    <textarea class="input input-comment" id="user-comment" name="user-comment" title="Please fill out this field" placeholder="Text input"></textarea>
                 </div>
             </form>
             
-
             <div class="modal-checkbox-container" >
                 <input class="visually-hidden" type="checkbox" id="user-privacy" name="user-privacy" value="true"/>
-                <label class="text text-label" for="user-privacy">I accept the terms and conditions of the <a href="" class="text-check-lab">Privacy Policy</a></label>
+                <label class="text text-label" for="user-privacy">
+                    <span class="checkbox">
+                        <svg class="icon-check" width="10" height="8">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    I accept the terms and conditions of the <a href="" class="text-check-lab">Privacy Policy</a>
+                </label>
             </div>
 
-                <button class="button modal-button" type="submit">Send</button>
+            <button class="button modal-button" type="submit">Send</button>
         </div>
     </div>
     
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
